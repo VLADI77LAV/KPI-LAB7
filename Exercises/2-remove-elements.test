@@ -1,0 +1,19 @@
+({
+  name: 'removeElements',
+  length: [50, 200],
+  test: removeElements => {
+    const array = [1, 2, 3, 2, 4, 5];
+
+    removeElements(array, 2, 4);
+
+    if (array.join() !== '1,3,5') {
+      throw new Error('Remove elements test failed');
+    }
+
+    removeElements(array, 10);
+
+    if (array.join() !== '1,3,5') {
+      throw new Error('Missing elements test failed');
+    }
+  },
+})
